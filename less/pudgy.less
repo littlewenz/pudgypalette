@@ -1,0 +1,139 @@
+body {
+  overflow-x: hidden;
+  font-family: Poppins;
+}
+
+.btn {
+  border-radius: 40px;
+  background: #f5fdff;
+  box-shadow: 7px 10px 4px 0px rgba(0, 0, 0, 0.25);
+  color: black;
+  width: 272px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+h1 {
+  color: #00142d;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px; /* 125% */
+}
+
+h2 {
+  color: #00142d;
+  font-family: Jomhuria;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h5 {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#PudgyPaletteName {
+  font-family: Jomhuria;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#menu {
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  height: 60px;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+#landing {
+  border-radius: 0px 0px 60px 60px;
+  background: #81acfd;
+  height: 100vh;
+
+  .align-items-center {
+    height: 100%;
+  }
+
+  p {
+    color: white;
+  }
+}
+.landing-btn {
+  background-color: #f5fdff;
+  border-color: #f5fdff;
+  color: #00142d;
+
+  &:hover {
+    background-color: #00142d;
+    color: #f5fdff;
+    border-color: #00142d;
+  }
+}
+
+#artists {
+  .card {
+    width: 100%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+    h5 {
+      margin-top: 10px;
+    }
+
+    .card-text {
+      flex-grow: 1;
+    }
+
+    .artist-btn {
+      background-color: #00142d;
+      border-color: #00142d;
+      color: #f5fdff;
+      transition: color 0.3s;
+
+      &:hover {
+        background-color: #f5fdff;
+        color: #00142d;
+        border-color: #f5fdff;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #477dfa;
+  a {
+    color: white;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #00142d;
+    }
+  }
+}
