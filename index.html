@@ -1,95 +1,217 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pudgy Palette</title>
 
-        <!-- jQuery libraries -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<head>
+    <title>Pudgy Palette</title>
 
-        <!-- bootstrap libraries -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"/>
+    <!-- jQuery libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
-        <!-- fontawesome libraries -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <!-- bootstrap libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
 
-        <!-- google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- fontawesome libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        <!-- custom css -->
-        <script src="./js/pudgy.js"></script>
-        <link rel="stylesheet" href="./css/pudgy.css"/>
-        
-    </head>
-    <body>
-        <div class="container-fluid p-0">
-            <!--  navigation menu -->
-            <div id="menu" class="d-flex align-items-center justify-content-evenly flex-row">
-                <div class="d-flex flex-column">
-                    <a href="#products">Shop</a>
-                </div>
-                <div class="d-flex flex-column">
-                    <a href="#">About</a>
-                </div>
-                <div id="PudgyPaletteName" class="d-flex flex-column text-center">Peng Shop</div>
-                <div class="d-flex flex-column">
-                    <a href="#">Login</a>
-                </div>
-                <div class="d-flex flex-column">
-                    <a href="#">Sign Up</a>
-                </div>
+    <!-- custom css -->
+    <script src="./js/pudgy.js"></script>
+    <link rel="stylesheet" href="./css/pudgy.css" />
+
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!--  navigation menu -->
+        <div id="menu" class="d-flex align-items-center justify-content-evenly flex-row">
+            <div class="d-flex flex-column">
+                <a href="#artists">Artists</a>
             </div>
+            <div id="PudgyPaletteName" class="d-flex flex-column text-center">Peng Shop</div>
+            <div class="d-flex flex-column">
+                <a href="#products">Products</a>
+            </div>
+            <!--
+            <div class="d-flex flex-column">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalFAQ">About</a>
+            </div>
+            <div class="d-flex flex-column">
+                <a href="https://www.redbubble.com/signup" target="_blank">Sign Up</a>
+            </div>
+            -->
+        </div>
 
-            <!-- landing section -->
-            <section id="landing">
-                <div class="row">
-                    <!-- left side -->
-                    <div class="col-6">
-                        <div class="d-flex align-items-center">
-                            <div class="container p-5">
-                                <div class="row">
-                                    <div class="col">
-                                        <h1>A new model for open collaboration</h1>
-                                        <p>Run an organization where members get rewarded for their contributions with fractional ownership.</p>
-                                    </div>
+        <!-- landing section -->
+        <section id="landing">
+            <div class="row">
+                <!-- left side -->
+                <div class="col-6">
+                    <div class="d-flex align-items-center min-vh-100">
+                        <div class="container p-5">
+                            <div class="row">
+                                <div class="col">
+                                    <h1>Bringing the Penguin Community to Life, One Artwork at a Time!</h1>
+                                    <p>At Pudgy Palette, we celebrate our artists' unique creations. Each purchase supports their talent and enriches our community. Join us in making a difference, one artwork at a time!</p>
                                 </div>
-                                <div class="row text-center">
-                                    <div class="col">
-                                        <a class="btn btn-primary btn-lg"  href="#" role="button">Shop now</a>
-                                    </div>
+                            </div>
+                            <div class="row text-center mt-5">
+                                <div class="col">
+                                    <a class="btn landing-btn btn-lg" href="#artists" role="button">Shop now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- right side -->
-                    <div class="col-6">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <img src="./img/loading.svg" height="70%;"/>
+                <!-- right side -->
+                <div class="col-6">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="./img/loading.svg" height="70%;" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- artists section -->
+        <section id="artists" class="py-5">
+            <div class="container">
+                <h2 class="text-left mb-4">Artists</h2>
+                <div class="row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <!--
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%" fill="#dee2e6"
+                                dy=".3em">Art Placeholder</text>
+                        </svg>
+                        -->
+                        <img src="./img/littlewenz_pfp.svg" height="100px" class="pfp">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                            <h5 class="card-title">Little WenZ</h5>
+                            <p class="card-text">Master of Dadsaster and Bubble Tea Inhaler</p>
+                            <a href="#" class="btn artist-btn btn-lg">View Shop</a>
+                            <br/>
+                            <a href="http://x.com/littlewenz" class="socials" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Art Placeholder</text>
+                        </svg>
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                            <h5 class="card-title">Stoopid Penguin</h5>
+                            <p class="card-text">Le Dev by Day, Web3 Illustrator by night</p>
+                            <a href="https://www.redbubble.com/people/StoopidPenguin/shop?asc=u" class="btn artist-btn btn-lg">View Shop</a>
+                            <br/>
+                            <a href="https://x.com/StoopidPenguin_" class="socials" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- artists section -->
-            <section id="artists">
+        <!-- products section -->
+        <section id="products" class="py-5">
+            <div class="container">
+                <h2 class="text-left mb-4">Products</h2>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <svg class="d-block w-100 bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Art Placeholder</text>
+                            </svg>
+                        </div>
+                        <div class="carousel-item">
+                            <svg class="d-block w-100 bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Art Placeholder</text>
+                            </svg>
+                        </div>
+                        <div class="carousel-item">
+                            <svg class="d-block w-100 bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Art Placeholder</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            </section>
 
-            <!-- products section -->
-            <section id="products">
+        <!-- footer section -->
+        <footer class="text-white py-4">
+            <div class="container">
+                <div class="row mb-3">
+                    <ul class="list-unstyled">
+                        <!--
+                        <li><a href="https://help.redbubble.com/hc/en-us/articles/203024315-Where-is-my-order"
+                                class="text-decoration-none">Delivery</a></li>
+                        <li><a href="https://help.redbubble.com/hc/en-us/articles/5857691382164-What-is-the-Redbubble-return-and-exchange-policy"
+                                class="text-decoration-none">Returns</a></li>
+                        <li><a href="https://help.redbubble.com/hc/en-us/articles/217196086-Where-does-my-order-ship-from"
+                                class="text-decoration-none">Shipping & Manufacturing</a>
+                        </li>
+                        <li><a href="https://connect.studentbeans.com/v4/hosted/redbubble/us"
+                                class="text-decoration-none">Student Discount</a>
+                        </li>
+                        -->
+                        <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalFAQ">About</a></li>
+                    </ul>
+                </div>
 
-            </section>
+                <div style="width: 100%; height: 100%; border: 1px white solid"></div>
 
+                <div class="d-flex justify-content-end text-end mt-3">
+                    <p>&copy; 2024 Peng Shop. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
 
-            <!-- footer section -->
-            <footer>
-
-            </footer>
+        <div class="modal" id="modalFAQ" tabindex="-1" aria-labelledby="modalFAQLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">About</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>1. What is this this page about?</p>
+                    <p>This landing page showcases the incredible works of Pudgy Penguins community artists. You can explore a variety of unique designs and products available for purchase on <a href="https://www.redbubble.com/" target="_blank">Redbubble</a>.</p>
+                    <br/>
+                    <p>2. Who are the artists featured here?</p>
+                    <p>The artists featured are talented individuals from the Pudgy Penguins community, each bringing their unique style and creativity. You can learn more about them by clicking on their profiles linked under <a href="#artists">artists</a> section.</p>
+                    <br/>
+                    <p>3. What types of products are available?</p>
+                    <p>Redbubble offers a wide range of products including apparel, home decor, stationery, and accessories. Each product features original designs created by our artists.</p>
+                    <br/>
+                    <p>4. How do I purchase items?</p>
+                    <p>Simply <a href="https://www.redbubble.com/signup" target="_blank">create an account on Redbubble</a> and view our <a href="#artists">artists'</a> shops!</p>
+                    <br/>
+                    <p>5. Can I support the artists?</p>
+                    <p>Absolutely! Purchasing their products is a great way to support them. Additionally, you can share their work on social media to help spread the word.</p>
+                    <br/>
+                    <p>6. How can I become a featured artist?</p>
+                    <p>If you're a Pudgy Penguins community artist and interested in being featured, please reach out to us by messaging us through our X accounts.</p>
+                  </div>
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

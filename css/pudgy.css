@@ -4,7 +4,7 @@ body {
 }
 .btn {
   border-radius: 40px;
-  background: #F5FDFF;
+  background: #f5fdff;
   box-shadow: 7px 10px 4px 0px rgba(0, 0, 0, 0.25);
   color: black;
   width: 272px;
@@ -12,13 +12,25 @@ body {
   flex-shrink: 0;
 }
 h1 {
-  color: #00142C;
+  color: #00142d;
   font-family: Poppins;
   font-size: 64px;
   font-style: normal;
   font-weight: 600;
   line-height: 80px;
   /* 125% */
+}
+h2 {
+  color: #00142d;
+  font-family: Jomhuria;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: normal;
+}
+h5 {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
 }
 #PudgyPaletteName {
   font-family: Jomhuria;
@@ -45,12 +57,70 @@ h1 {
 }
 #landing {
   border-radius: 0px 0px 60px 60px;
-  background: #81ACFD;
+  background: #81acfd;
   height: 100vh;
 }
 #landing .align-items-center {
-  height: 85%;
+  height: 100%;
 }
 #landing p {
   color: white;
+}
+.landing-btn {
+  background-color: #f5fdff;
+  border-color: #f5fdff;
+  color: #00142d;
+}
+.landing-btn:hover {
+  background-color: #00142d;
+  color: #f5fdff;
+  border-color: #00142d;
+}
+#artists .card {
+  width: 100%;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#artists .card .pfp {
+  margin: 25px;
+}
+#artists .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+#artists .card-body h5 {
+  margin-top: 10px;
+}
+#artists .card-body .card-text {
+  flex-grow: 1;
+}
+#artists .card-body .artist-btn {
+  background-color: #00142d;
+  border-color: #00142d;
+  color: #f5fdff;
+  transition: color 0.3s;
+}
+#artists .card-body .artist-btn:hover {
+  background-color: #f5fdff;
+  color: #00142d;
+  border-color: #f5fdff;
+}
+#artists .card-body a.socials {
+  color: #000000 !important;
+  text-decoration: none;
+}
+footer {
+  background-color: #477dfa;
+}
+footer a {
+  color: white;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #00142d;
 }
