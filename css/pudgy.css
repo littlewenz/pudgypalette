@@ -124,3 +124,10 @@ footer a {
 footer a:hover {
   color: #00142d;
 }
+@media only screen and (max-width: 768px) {
+  .mobile_bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+  }
+}
