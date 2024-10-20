@@ -10,6 +10,7 @@ body {
   width: 272px;
   height: 50px;
   flex-shrink: 0;
+  padding-top: 13px;
 }
 h1 {
   color: #00142d;
@@ -34,7 +35,7 @@ h5 {
 }
 #PudgyPaletteName {
   font-family: Jomhuria;
-  font-size: 40px;
+  font-size: 3em;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -49,7 +50,6 @@ h5 {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  height: 60px;
 }
 #menu a {
   color: black;

@@ -27,12 +27,14 @@
     <script src="./js/pudgy.js"></script>
     <link rel="stylesheet" href="./css/pudgy.css" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
     <div class="container-fluid p-0">
         <!--  navigation menu -->
-        <div id="menu" class="d-flex align-items-center justify-content-evenly flex-row">
+        <div id="menu" class="d-flex align-items-center justify-content-evenly flex-row merchandice_menu">
             <!--
             <div class="d-flex flex-column">
                 <a href="#artists">Artists</a>
@@ -56,39 +58,42 @@
 
         <!-- landing section -->
         <section id="landing">
-            <div class="row">
-                <!-- left side -->
-                <div class="col-12 col-md-6">
-                    <div class="d-flex align-items-center min-vh-100">
-                        <div class="container p-5">
-                            <div class="row">
-                                <div class="col d-none d-md-block">
-                                    <h1>By Penguins<br/>For Penguins</h1>
-                                    <p>At Merch &amp; Ice, we celebrate our artists' unique creations. Each purchase
-                                        supports their talent and enriches our community. Join us in making a
-                                        difference, one artwork at a time!</p>
+            <div class="container">
+                <div class="row">
+                    <!-- left side -->
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex align-items-center min-vh-100">
+                            <div class="container p-5">
+                                <div class="row">
+                                    <div class="col d-none d-md-block">
+                                        <!--<h1>By Penguins<br/>For Penguins</h1>-->
+                                        <img src="./img/bypengforpeng.png" width="80%;" style="margin-bottom: 50px;"/>
+                                        <p>At Merch &amp; Ice, we celebrate our artists' unique creations. Each purchase
+                                            supports their talent and enriches our community. Join us in making a
+                                            difference, one artwork at a time!</p>
+                                    </div>
+                                    <div class="col d-md-none text-center">
+                                        <img src="./img/bypengforpeng.png" width="95%;" style="margin-bottom: 50px;"/>
+                                        <p>At Merch & Ice, we celebrate unique creations. Each purchase supports our artists and strengthens the community.</p>
+                                    </div>
                                 </div>
-                                <div class="col d-md-none text-center">
-                                    <h1>By Penguins<br/>For Penguins</h1>
-                                    <p>At Merch & Ice, we celebrate unique creations. Each purchase supports our artists and strengthens the community.</p>
-                                </div>
-                            </div>
-                            <div class="row text-center mt-5">
-                                <div class="col-12 d-md-none">
-                                    <img src="./img/loading.svg" height="70%;" />
-                                </div>
-                                <div class="col-12 mobile_bottom">
-                                    <a class="btn landing-btn btn-lg" href="#artists" role="button">Shop now</a>
+                                <div class="row text-center mt-5">
+                                    <div class="col-12 d-md-none">
+                                        <img src="./img/loading.svg" width="95%;" />
+                                    </div>
+                                    <div class="col-12 mobile_bottom">
+                                        <a class="btn landing-btn btn-md" href="#artists" role="button">Shop now</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- right side -->
-                <div class="col-12 col-md-6 d-md-block d-none">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <img src="./img/loading.svg" height="70%;" />
+                    <!-- right side -->
+                    <div class="col-12 col-md-6 d-md-block d-none">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="./img/loading.svg" height="70%;" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,7 +110,7 @@
                             <h5 class="card-title">Little WenZ</h5>
                             <p class="card-text">Master of Dadsaster and Bubble Tea Inhaler</p>
                             <a href="https://www.redbubble.com/people/LittleWenZ/shop?asc=u" target="_blank"
-                                class="btn artist-btn btn-lg">View Shop</a>
+                                class="btn artist-btn btn-md">View Shop</a>
                             <br />
                             <a href="https://x.com/littlewenz" class="socials" target="_blank"><i
                                     class="fa-brands fa-x-twitter fa-2xl"></i></a>
@@ -118,7 +123,7 @@
                             <h5 class="card-title">Stoopid Penguin</h5>
                             <p class="card-text">Le Dev by Day, Web3 Illustrator by night</p>
                             <a href="https://www.redbubble.com/people/StoopidPenguin/shop?asc=u" target="_blank"
-                                class="btn artist-btn btn-lg">View Shop</a>
+                                class="btn artist-btn btn-md">View Shop</a>
                             <br />
                             <a href="https://x.com/StoopidPenguin_" class="socials" target="_blank"><i
                                     class="fa-brands fa-x-twitter fa-2xl"></i></a>
@@ -233,5 +238,6 @@
         });
     </script>
 </body>
+
 
 </html>
