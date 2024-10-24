@@ -76,41 +76,41 @@ h5 {
   color: #f5fdff;
   border-color: #00142d;
 }
-#artists .card {
+#members .card {
   width: 100%;
   margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#artists .card .pfp {
+#members .card .pfp {
   margin: 25px;
 }
-#artists .card-body {
+#members .card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   height: 100%;
 }
-#artists .card-body h5 {
+#members .card-body h5 {
   margin-top: 10px;
 }
-#artists .card-body .card-text {
+#members .card-body .card-text {
   flex-grow: 1;
 }
-#artists .card-body .artist-btn {
+#members .card-body .member-btn {
   background-color: #00142d;
   border-color: #00142d;
   color: #f5fdff;
   transition: color 0.3s;
 }
-#artists .card-body .artist-btn:hover {
+#members .card-body .member-btn:hover {
   background-color: #f5fdff;
   color: #00142d;
   border-color: #f5fdff;
 }
-#artists .card-body a.socials {
+#members .card-body a.socials {
   color: #000000 !important;
   text-decoration: none;
 }
