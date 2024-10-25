@@ -114,6 +114,18 @@ h5 {
   color: #000000 !important;
   text-decoration: none;
 }
+#members .card-body ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  padding: 0px;
+  margin: 0px;
+}
+#members .card-body ul li {
+  display: table-cell;
+  width: auto;
+  text-align: center;
+}
 footer {
   background-color: #477dfa;
 }
