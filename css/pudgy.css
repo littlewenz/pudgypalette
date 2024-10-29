@@ -1,22 +1,41 @@
 @font-face {
   font-family: 'knicknack';
-  src: url('/fonts/knicknack.woff2') format('woff2'), url('/fonts/knicknack.woff') format('woff');
+  src: url('../fonts/knicknack.woff2') format('woff2'), url('../fonts/knicknack.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
   font-family: Poppins;
+  font-size: 20px;
+  line-height: 28px;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+.font-knicknack {
+  font-family: knicknack;
 }
 .btn {
-  border-radius: 40px;
-  background: #f5fdff;
-  box-shadow: 7px 10px 4px 0px rgba(0, 0, 0, 0.25);
-  color: black;
-  width: 272px;
+  /* Layout Properties */
+  top: 697px;
+  left: 280px;
+  width: 250px;
   height: 50px;
-  flex-shrink: 0;
-  padding-top: 13px;
+  /* UI Properties */
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  opacity: 1;
+  padding-top: 11px;
+  font: Poppins;
+  font-weight: 700;
 }
 h1 {
   color: #00142d;
@@ -39,12 +58,29 @@ h5 {
   font-size: 24px;
   font-weight: 500;
 }
-#PudgyPaletteName {
-  font-family: Jomhuria;
-  font-size: 3em;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.arrow {
+  position: relative;
+  top: -47px;
+  text-decoration: none;
+}
+.arrow-back {
+  text-decoration: none;
+}
+.title {
+  font-size: 80px;
+  line-height: 80px;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 769px) {
+  .title.section-heading {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 40px;
+    line-height: 42px;
+  }
 }
 #menu {
   background-color: white;
@@ -61,10 +97,22 @@ h5 {
   color: black;
   text-decoration: none;
 }
+#MerchAndIceName {
+  font-family: Jomhuria;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 #landing {
-  border-radius: 0px 0px 60px 60px;
-  background: #81acfd;
-  height: 100vh;
+  border-radius: 0px 0px 120px 120px;
+  background: #699FFA;
+  height: 97vh;
+}
+@media only screen and (max-width: 768px) {
+  #landing {
+    border-radius: 0px 0px 60px 60px;
+  }
 }
 #landing .align-items-center {
   height: 100%;
@@ -72,25 +120,73 @@ h5 {
 #landing p {
   color: white;
 }
-.landing-btn {
+#landing .landing-btn {
   background-color: #f5fdff;
   border-color: #f5fdff;
   color: #00142d;
 }
-.landing-btn:hover {
+#landing .landing-btn:hover {
   background-color: #00142d;
   color: #f5fdff;
   border-color: #00142d;
 }
+@media only screen and (max-width: 768px) {
+  #landing .mobile-bottom {
+    position: absolute;
+    bottom: 70px;
+    left: 0px;
+  }
+}
+#landing .next-section-btn {
+  position: relative;
+  bottom: 60px;
+  text-align: center;
+}
+#description {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+@media only screen and (max-width: 768px) {
+  #description {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
 #members .card {
-  width: 100%;
+  width: 18rem;
   margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 20px;
+  border: none;
+  background-color: #699FFA;
+}
+@media only screen and (max-width: 768px) {
+  #members .card {
+    width: 23rem;
+  }
 }
 #members .card .pfp {
-  margin: 25px;
+  margin-top: 25px;
+  height: 180px;
+}
+@media only screen and (max-width: 768px) {
+  #members .card .pfp {
+    height: 200px;
+  }
+}
+#members .card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 55px;
+  width: 120px;
+  right: 0px;
+  bottom: -17px;
+  background: url("../img/snow_member_shops.svg") no-repeat;
+  background-position-x: right;
+  background-size: 120px;
 }
 #members .card-body {
   display: flex;
@@ -98,54 +194,79 @@ h5 {
   align-items: center;
   text-align: center;
   height: 100%;
+  color: #FFFFFF;
 }
 #members .card-body h5 {
   margin-top: 10px;
 }
-#members .card-body .card-text {
+#members .card-body .card-title {
+  font-family: knicknack;
+  font-size: 30px;
   flex-grow: 1;
 }
+@media only screen and (max-width: 768px) {
+  #members .card-body .card-title {
+    font-size: 28px;
+  }
+}
+#members .card-body .card-text {
+  flex-grow: 1;
+  font-size: 16px;
+  padding: 15px 0 15px 0;
+}
 #members .card-body .member-btn {
-  background-color: #00142d;
-  border-color: #00142d;
-  color: #f5fdff;
   transition: color 0.3s;
 }
 #members .card-body .member-btn:hover {
-  background-color: #f5fdff;
-  color: #00142d;
-  border-color: #f5fdff;
+  background-color: #00142d;
+  color: #f5fdff;
+  border-color: #00142d;
 }
 #members .card-body a.socials {
-  color: #000000 !important;
   text-decoration: none;
+  color: #FFFFFF !important;
 }
 #members .card-body ul {
-  width: 100%;
+  width: 40%;
   display: table;
   table-layout: fixed;
   padding: 0px;
   margin: 0px;
+}
+@media screen and (max-width: 768px) {
+  #members .card-body ul {
+    width: 50%;
+  }
 }
 #members .card-body ul li {
   display: table-cell;
   width: auto;
   text-align: center;
 }
-footer {
-  background-color: #477dfa;
-}
-footer a {
-  color: white;
-  transition: color 0.3s;
-}
-footer a:hover {
-  color: #00142d;
-}
-@media only screen and (max-width: 768px) {
-  .mobile_bottom {
-    position: absolute;
-    bottom: 20px;
-    left: 0px;
+@media screen and (max-width: 768px) {
+  #members .card-body ul li {
+    font-size: 1.75em !important;
   }
+}
+footer {
+  background-color: #699FFA;
+  border-radius: 120px 120px 0px 0px;
+  font-family: knicknack;
+  font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    border-radius: 60px 60px 0px 0px;
+    font-size: 18px;
+  }
+}
+footer .snow-corner-left {
+  position: relative;
+  top: -40px;
+  left: 20px;
+}
+footer .snow-corner-right {
+  position: relative;
+  right: 20px;
+  bottom: -20px;
 }

@@ -1,26 +1,49 @@
+@blue-default: #699FFA;
+
 @font-face {
     font-family: 'knicknack';
-    src: url('/fonts/knicknack.woff2') format('woff2'),
-         url('/fonts/knicknack.woff') format('woff');
+    src: url('../fonts/knicknack.woff2') format('woff2'),
+         url('../fonts/knicknack.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     font-family: Poppins;
+    font-size: 20px;
+    line-height: 28px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 15px;
+        line-height: 23px;
+    }
+}
+
+.font-knicknack
+{
+    font-family: knicknack;
 }
 
 .btn {
-    border-radius: 40px;
-    background: #f5fdff;
-    box-shadow: 7px 10px 4px 0px rgba(0, 0, 0, 0.25);
-    color: black;
-    width: 272px;
+    /* Layout Properties */
+    top: 697px;
+    left: 280px;
+    width: 250px;
     height: 50px;
-    flex-shrink: 0;
-    padding-top: 13px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    opacity: 1;
+    padding-top: 11px;
+    font: Poppins;
+    font-weight: 700;
 }
 
 h1 {
@@ -46,12 +69,32 @@ h5 {
     font-weight: 500;
 }
 
-#PudgyPaletteName {
-    font-family: Jomhuria;
-    font-size: 3em;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.arrow {
+    position: relative;
+    top: -47px;
+    text-decoration: none;
+}
+
+.arrow-back {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 80px;
+    line-height: 80px;
+
+    @media screen and (min-width: 769px) {
+        &.section-heading {
+            font-size: 52px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    margin-bottom: 35px;
 }
 
 #menu {
@@ -71,10 +114,25 @@ h5 {
     }
 }
 
+#MerchAndIceName {
+    font-family: Jomhuria;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 #landing {
-    border-radius: 0px 0px 60px 60px;
-    background: #81acfd;
-    height: 100vh;
+    border-radius: 0px 0px 120px 120px;
+
+    @media only screen and (max-width: 768px) {
+        border-radius: 0px 0px 60px 60px;
+    }
+
+    background: @blue-default;
+    height: 97vh;
+
+    
 
     .align-items-center {
         height: 100%;
@@ -83,29 +141,81 @@ h5 {
     p {
         color: white;
     }
-}
-.landing-btn {
-    background-color: #f5fdff;
-    border-color: #f5fdff;
-    color: #00142d;
 
-    &:hover {
-        background-color: #00142d;
-        color: #f5fdff;
-        border-color: #00142d;
+    .landing-btn {
+        background-color: #f5fdff;
+        border-color: #f5fdff;
+        color: #00142d;
+    
+        &:hover {
+            background-color: #00142d;
+            color: #f5fdff;
+            border-color: #00142d;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .mobile-bottom
+        {
+            position: absolute;
+            bottom: 70px;
+            left: 0px;  
+        }   
+    }
+
+    .next-section-btn
+    {
+        position: relative;
+        bottom: 60px;
+        text-align: center;
+    }
+}
+
+#description {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @media only screen and (max-width: 768px) {
+        padding-top: 125px;
+        padding-bottom: 125px;
     }
 }
 
 #members {
     .card {
-        width: 100%;
+        width: 18rem;
         margin: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-radius: 20px;
+        border: none;
+        background-color: @blue-default;
+
+        @media only screen and (max-width: 768px) {
+            width: 23rem;
+        }
 
         .pfp {
-            margin: 25px;
+            margin-top: 25px;
+            height: 180px;
+
+            @media only screen and (max-width: 768px) {
+                height: 200px;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 55px;
+            width: 120px;
+            right: 0px;
+            bottom: -17px;
+            background: url("../img/snow_member_shops.svg") no-repeat;
+            background-position-x: right;
+            background-size: 120px;
         }
     }
 
@@ -115,37 +225,53 @@ h5 {
         align-items: center;
         text-align: center;
         height: 100%;
+        color: #FFFFFF;
 
         h5 {
-        margin-top: 10px;
+            margin-top: 10px;
+        }
+
+        .card-title {
+            font-family: knicknack;
+            font-size: 30px;
+            flex-grow: 1;
+
+            @media only screen and (max-width: 768px) {
+                font-size: 28px;
+            }
+
         }
 
         .card-text {
-        flex-grow: 1;
+            flex-grow: 1;
+            font-size: 16px;
+            padding: 15px 0 15px 0;
         }
 
         .member-btn {
-            background-color: #00142d;
-            border-color: #00142d;
-            color: #f5fdff;
             transition: color 0.3s;
 
             &:hover {
-                background-color: #f5fdff;
-                color: #00142d;
-                border-color: #f5fdff;
+                background-color: #00142d;
+                color: #f5fdff;
+                border-color: #00142d;
             }
         }
 
         a {
             &.socials {
-                color: #000000 !important;
-                text-decoration: none;;
+                text-decoration: none;
+                color: #FFFFFF !important;
             }
         }
 
         ul {
-            width: 100%;
+            width: 40%;
+
+            @media screen and (max-width: 768px) {
+                width: 50%;
+            }
+
             display: table;
             table-layout: fixed;
             padding: 0px;
@@ -155,30 +281,35 @@ h5 {
                 display: table-cell;
                 width: auto;
                 text-align: center;
+                
+                @media screen and (max-width: 768px) {
+                    font-size: 1.75em !important;
+                }
             }
-
         }
     }
 }
 
 footer {
-    background-color: #477dfa;
-    a {
-        color: white;
-        transition: color 0.3s;
+    background-color: @blue-default;
+    border-radius: 120px 120px 0px 0px;
+    font-family: knicknack;
+    font-size: 24px;
 
-        &:hover {
-        color: #00142d;
-        }
+    @media screen and (max-width: 768px) {
+        border-radius: 60px 60px 0px 0px;
+        font-size: 18px;
     }
-}
 
+    .snow-corner-left {
+        position: relative;
+        top: -40px;
+        left: 20px;
+    }
 
-@media only screen and (max-width: 768px) {
-    .mobile_bottom
-    {
-        position: absolute;
-        bottom: 20px;
-        left: 0px;  
-    }   
+    .snow-corner-right {
+        position: relative;
+        right: 20px;
+        bottom: -20px;
+    }
 }
