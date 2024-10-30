@@ -248,6 +248,90 @@ h5 {
     font-size: 1.75em !important;
   }
 }
+#faqs .accordion .accordion-item {
+  color: white;
+  background-color: #699FFA;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+#faqs .accordion .accordion-item button {
+  color: white;
+  background-color: #699FFA;
+  border-radius: 20px;
+  font-family: knicknack;
+  font-size: 20px;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0);
+  padding-right: 100px;
+}
+@media screen and (max-width: 768px) {
+  #faqs .accordion .accordion-item button {
+    height: 88px;
+  }
+}
+#faqs .accordion .accordion-item button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 40px;
+  width: 50px;
+  right: 5px;
+  top: 10px;
+  background: url("../img/snow_button_faq.svg") no-repeat;
+  background-position-x: right;
+  background-size: 50px;
+}
+@media screen and (max-width: 768px) {
+  #faqs .accordion .accordion-item button::before {
+    top: 28px;
+  }
+}
+#faqs .accordion .accordion-item button::after {
+  background-image: url('../img/arrow_down.svg');
+  z-index: 2;
+  position: absolute;
+  background-size: 18px;
+  right: 20px;
+  top: 18px;
+}
+@media screen and (max-width: 768px) {
+  #faqs .accordion .accordion-item button::after {
+    top: 40px;
+  }
+}
+#faqs .accordion .accordion-item button:not(.collapsed)::after {
+  rotate: Y 180deg;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+@media screen and (max-width: 768px) {
+  #faqs .accordion .accordion-item button:not(.collapsed)::after {
+    top: 30px;
+  }
+}
+#faqs .accordion .accordion-item .accordion-body {
+  font-family: Poppins;
+  font-size: 16px;
+}
+#faqs .accordion .accordion-item .accordion-body a {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+#faqs .thankyou {
+  margin: 100px 0 100px 0;
+}
+@media screen and (max-width: 768px) {
+  #faqs .thankyou {
+    margin: 50px 0 50px 0;
+  }
+}
+#faqs .thankyou img {
+  background-color: #699FFA;
+  border-radius: 50%;
+  height: 100px;
+  margin-bottom: 15px;
+}
 footer {
   background-color: #699FFA;
   border-radius: 120px 120px 0px 0px;

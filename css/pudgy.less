@@ -290,6 +290,97 @@ h5 {
     }
 }
 
+#faqs {
+    .accordion {
+        .accordion-item {
+            color: white;
+            background-color: @blue-default;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            button {
+                color: white;
+                background-color: @blue-default;
+                border-radius: 20px;
+                font-family: knicknack;
+                font-size: 20px;
+                box-shadow: none;
+                border-color: rgba(0,0,0,0);
+                padding-right: 100px;
+
+                @media screen and (max-width: 768px) {
+                    height: 88px;
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 40px;
+                    width: 50px;
+                    right: 5px;
+                    top: 10px;
+                    background: url("../img/snow_button_faq.svg") no-repeat;
+                    background-position-x: right;
+                    background-size: 50px;
+
+                    @media screen and (max-width: 768px) {
+                        top: 28px;
+                    }
+                }
+
+                &::after {
+                    background-image: url('../img/arrow_down.svg');
+                    z-index: 2;
+                    position: absolute;
+                    background-size: 18px;
+                    right: 20px;
+                    top: 18px;
+
+                    @media screen and (max-width: 768px) {
+                        top: 40px;
+                    }
+                }
+
+                &:not(.collapsed)::after{
+                    rotate: Y 180deg;
+                    position: absolute;
+                    top: 12px;
+                    right: 20px;
+
+                    @media screen and (max-width: 768px) {
+                        top: 30px;
+                    }
+                }
+
+            }
+
+            .accordion-body {
+                font-family: Poppins;
+                font-size: 16px;
+
+                a {
+                    color: #FFFFFF;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .thankyou {
+        margin: 100px 0 100px 0;
+        @media screen and (max-width: 768px) {
+            margin: 50px 0 50px 0;
+        }
+        img {
+            background-color: @blue-default;
+            border-radius: 50%;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
 footer {
     background-color: @blue-default;
     border-radius: 120px 120px 0px 0px;
