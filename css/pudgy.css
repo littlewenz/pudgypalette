@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'knicknack';
+  font-family: 'Knicknack';
   src: url('Knicknack-Regular.eot');
   src: local('Knicknack Regular'), local('Knicknack-Regular'), url('Knicknack-Regular.eot?#iefix') format('embedded-opentype'), url('Knicknack-Regular.woff2') format('woff2'), url('Knicknack-Regular.woff') format('woff'), url('Knicknack-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -21,7 +21,7 @@ body {
   }
 }
 .font-knicknack {
-  font-family: knicknack;
+  font-family: Knicknack;
 }
 .btn {
   /* Layout Properties */
@@ -244,7 +244,7 @@ h5 {
   margin-top: 10px;
 }
 #members .card-body .card-title {
-  font-family: knicknack;
+  font-family: Knicknack;
   font-size: 30px;
   flex-grow: 1;
 }
@@ -302,7 +302,7 @@ h5 {
   color: white;
   background-color: #699FFA;
   border-radius: 20px;
-  font-family: knicknack;
+  font-family: Knicknack;
   font-size: 20px;
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0);
@@ -379,7 +379,7 @@ h5 {
 footer {
   background-color: #699FFA;
   border-radius: 120px 120px 0px 0px;
-  font-family: knicknack;
+  font-family: Knicknack;
   font-size: 24px;
 }
 @media screen and (max-width: 576px) {
