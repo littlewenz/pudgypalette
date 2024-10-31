@@ -19,7 +19,7 @@ body {
     font-size: 20px;
     line-height: 28px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         font-size: 15px;
         line-height: 23px;
     }
@@ -79,24 +79,6 @@ h5 {
     text-decoration: none;
 }
 
-.title {
-    font-size: 80px;
-    line-height: 80px;
-
-    @media screen and (min-width: 769px) {
-        &.section-heading {
-            font-size: 52px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        font-size: 40px;
-        line-height: 42px;
-    }
-
-    margin-bottom: 35px;
-}
-
 #menu {
     background-color: white;
     position: absolute;
@@ -122,10 +104,15 @@ h5 {
     line-height: normal;
 }
 
+#MerchAndIceLandingInfo
+{
+    margin-top: -60px;
+}
+
 #landing {
     border-radius: 0px 0px 120px 120px;
 
-    @media only screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         border-radius: 0px 0px 60px 60px;
     }
 
@@ -138,8 +125,55 @@ h5 {
         height: 100%;
     }
 
+    .title {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 35px;
+    
+        @media screen and (max-width: 576px) and (max-aspect-ratio: 1/1) {
+            font-size: 40px;
+            line-height: 42px;
+        }
+    
+        @media screen and (min-width: 577px) and (max-width: 768px) and (min-aspect-ratio: 1/1) {
+            font-size: 33px;
+            line-height: 35px;
+        }
+    
+        @media screen and (min-width: 769px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+            font-size: 49px;
+            line-height: 50px;
+        }
+    
+        @media screen and (min-width: 577px) and (max-width: 1200px) and (max-aspect-ratio: 1/1) {
+            font-size: 49px;
+            line-height: 50px;
+        }
+    }
+
     p {
         color: white;
+    
+        /*
+        max-aspect-ration: 1/1 = portrait
+        min-aspect-ration: 1/1 = landscape
+        */
+    
+        @media screen and (min-width: 577px) and (max-width: 768px) and (min-aspect-ratio: 1/1) {
+            font-size: 13px;
+            line-height: 14px;
+        }
+        @media screen and (min-width: 769px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    
+    /*
+        @media screen and (min-width: 577px) and (max-width: 1200px) and (max-aspect-ratio: 1/1) {
+            font-size: 49px;
+            line-height: 50px;
+        }
+            */
     }
 
     .landing-btn {
@@ -154,7 +188,7 @@ h5 {
         }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         .mobile-bottom
         {
             position: absolute;
@@ -166,8 +200,12 @@ h5 {
     .next-section-btn
     {
         position: relative;
-        bottom: 60px;
         text-align: center;
+        bottom: 60px;
+
+        @media screen and (max-width: 768px) {
+            bottom: 50px;
+        }
     }
 }
 
@@ -175,7 +213,7 @@ h5 {
     padding-top: 150px;
     padding-bottom: 150px;
 
-    @media only screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         padding-top: 125px;
         padding-bottom: 125px;
     }
@@ -192,7 +230,7 @@ h5 {
         border: none;
         background-color: @blue-default;
 
-        @media only screen and (max-width: 768px) {
+        @media screen and (max-width: 576px) {
             width: 23rem;
         }
 
@@ -200,7 +238,7 @@ h5 {
             margin-top: 25px;
             height: 180px;
 
-            @media only screen and (max-width: 768px) {
+            @media screen and (max-width: 576px) {
                 height: 200px;
             }
         }
@@ -236,7 +274,7 @@ h5 {
             font-size: 30px;
             flex-grow: 1;
 
-            @media only screen and (max-width: 768px) {
+            @media screen and (max-width: 576px) {
                 font-size: 28px;
             }
 
@@ -268,7 +306,7 @@ h5 {
         ul {
             width: 40%;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 576px) {
                 width: 50%;
             }
 
@@ -282,7 +320,7 @@ h5 {
                 width: auto;
                 text-align: center;
                 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 576px) {
                     font-size: 1.75em !important;
                 }
             }
@@ -308,7 +346,7 @@ h5 {
                 border-color: rgba(0,0,0,0);
                 padding-right: 100px;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 576px) {
                     height: 88px;
                 }
 
@@ -324,7 +362,7 @@ h5 {
                     background-position-x: right;
                     background-size: 50px;
 
-                    @media screen and (max-width: 768px) {
+                    @media screen and (max-width: 576px) {
                         top: 28px;
                     }
                 }
@@ -337,7 +375,7 @@ h5 {
                     right: 20px;
                     top: 18px;
 
-                    @media screen and (max-width: 768px) {
+                    @media screen and (max-width: 576px) {
                         top: 40px;
                     }
                 }
@@ -348,7 +386,7 @@ h5 {
                     top: 12px;
                     right: 20px;
 
-                    @media screen and (max-width: 768px) {
+                    @media screen and (max-width: 576px) {
                         top: 30px;
                     }
                 }
@@ -369,7 +407,7 @@ h5 {
 
     .thankyou {
         margin: 100px 0 100px 0;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 576px) {
             margin: 50px 0 50px 0;
         }
         img {
@@ -387,7 +425,7 @@ footer {
     font-family: knicknack;
     font-size: 24px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         border-radius: 60px 60px 0px 0px;
         font-size: 18px;
     }
