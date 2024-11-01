@@ -112,7 +112,7 @@ h5 {
 
 #MerchAndIceLandingInfo
 {
-    margin-top: -60px;
+    margin-top: -80px;
 }
 
 #landing {
@@ -123,7 +123,11 @@ h5 {
     }
 
     background: @blue-default;
-    height: 97vh;
+    height: 90vh;
+
+    @media screen and (max-width: 768px) {
+        height: 95vh;
+    }
 
     
 
@@ -134,7 +138,7 @@ h5 {
     .title {
         font-size: 80px;
         line-height: 80px;
-        margin-bottom: 35px;
+        margin-bottom: 15px;
     
         @media screen and (max-width: 576px) and (max-aspect-ratio: 1/1) {
             font-size: 40px;
@@ -207,10 +211,10 @@ h5 {
     {
         position: relative;
         text-align: center;
-        bottom: 60px;
+        bottom: 80px;
 
         @media screen and (max-width: 768px) {
-            bottom: 50px;
+            bottom: 30px;
         }
     }
 }

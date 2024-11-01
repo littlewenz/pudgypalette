@@ -92,16 +92,21 @@ h5 {
   line-height: normal;
 }
 #MerchAndIceLandingInfo {
-  margin-top: -60px;
+  margin-top: -80px;
 }
 #landing {
   border-radius: 0px 0px 120px 120px;
   background: #699FFA;
-  height: 97vh;
+  height: 90vh;
 }
 @media screen and (max-width: 576px) {
   #landing {
     border-radius: 0px 0px 60px 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #landing {
+    height: 95vh;
   }
 }
 #landing .align-items-center {
@@ -110,7 +115,7 @@ h5 {
 #landing .title {
   font-size: 80px;
   line-height: 80px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 @media screen and (max-width: 576px) and (max-aspect-ratio: 1/1) {
   #landing .title {
@@ -181,11 +186,11 @@ h5 {
 #landing .next-section-btn {
   position: relative;
   text-align: center;
-  bottom: 60px;
+  bottom: 80px;
 }
 @media screen and (max-width: 768px) {
   #landing .next-section-btn {
-    bottom: 50px;
+    bottom: 30px;
   }
 }
 #description {
