@@ -90,9 +90,14 @@ h5 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: 25px;
+  margin-bottom: -35px;
 }
-#MerchAndIceLandingInfo {
-  margin-top: -80px;
+@media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+  #MerchAndIceName {
+    margin-top: 0px;
+    margin-bottom: -55px;
+  }
 }
 #landing {
   border-radius: 0px 0px 120px 120px;
@@ -107,6 +112,33 @@ h5 {
 @media screen and (max-width: 768px) {
   #landing {
     height: 95vh;
+  }
+}
+#landing .logo {
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  #landing .logo {
+    height: 50px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+  #landing .logo {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #landing .logo-underline {
+    width: 100px;
+    position: relative;
+    top: -15px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+  #landing .logo-underline {
+    width: 100px;
+    position: relative;
+    top: -15px;
   }
 }
 #landing .align-items-center {
@@ -147,12 +179,6 @@ h5 {
         max-aspect-ration: 1/1 = portrait
         min-aspect-ration: 1/1 = landscape
         */
-  /*
-        @media screen and (min-width: 577px) and (max-width: 1200px) and (max-aspect-ratio: 1/1) {
-            font-size: 49px;
-            line-height: 50px;
-        }
-            */
 }
 @media screen and (min-width: 577px) and (max-width: 768px) and (min-aspect-ratio: 1/1) {
   #landing p {
@@ -179,16 +205,16 @@ h5 {
 @media screen and (max-width: 576px) {
   #landing .mobile-bottom {
     position: absolute;
-    bottom: 70px;
     left: 0px;
+    bottom: 70px;
   }
 }
 #landing .next-section-btn {
   position: relative;
   text-align: center;
-  bottom: 80px;
+  bottom: -100px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
   #landing .next-section-btn {
     bottom: 30px;
   }

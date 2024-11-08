@@ -108,11 +108,13 @@ h5 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-#MerchAndIceLandingInfo
-{
-    margin-top: -80px;
+    margin-top: 25px;
+    margin-bottom: -35px;
+    
+    @media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+        margin-top: 0px;
+        margin-bottom: -55px;
+    }
 }
 
 #landing {
@@ -129,7 +131,33 @@ h5 {
         height: 95vh;
     }
 
+    .logo {
+        height: 100px;
+
+        @media screen and (max-width: 768px) {
+            height: 50px;
+        }
     
+        @media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+            height: 50px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo-underline {
+            width: 100px;
+            position: relative;
+            top: -15px;
+        }
+    }
+    
+    @media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+        .logo-underline {
+            width: 100px;
+            position: relative;
+            top: -15px;
+        }
+    }
 
     .align-items-center {
         height: 100%;
@@ -177,13 +205,6 @@ h5 {
             font-size: 16px;
             line-height: 18px;
         }
-    
-    /*
-        @media screen and (min-width: 577px) and (max-width: 1200px) and (max-aspect-ratio: 1/1) {
-            font-size: 49px;
-            line-height: 50px;
-        }
-            */
     }
 
     .landing-btn {
@@ -202,8 +223,8 @@ h5 {
         .mobile-bottom
         {
             position: absolute;
+            left: 0px;
             bottom: 70px;
-            left: 0px;  
         }   
     }
 
@@ -211,9 +232,9 @@ h5 {
     {
         position: relative;
         text-align: center;
-        bottom: 80px;
-
-        @media screen and (max-width: 768px) {
+        bottom: -100px;
+    
+        @media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
             bottom: 30px;
         }
     }
