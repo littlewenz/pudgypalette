@@ -22,6 +22,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
 
+    <!-- swiperjs libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <!-- fontawesome libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
@@ -34,7 +37,6 @@
         rel="stylesheet">
 
     <!-- custom js/css -->
-    <script src="./js/pudgy.js"></script>
     <link rel="stylesheet" href="./css/pudgy.css" />
 </head>
 
@@ -130,99 +132,111 @@
         <section id="members" class="py-5">
             <div class="container">
                 <h2 class="text-left mb-4 title font-knicknack text-center section-heading">Member Shops</h2>
-                <div class="row justify-content-center">
-                    <div class="card">
-                        <img src="./img/pfp/littlewenz.svg" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">LittleWenZ</h5>
-                            <p class="card-text">Master of Dadsaster<br/>and Bubble Tea Inhaler</p>
-                            <a href="https://www.redbubble.com/people/LittleWenZ/shop?asc=u" target="_blank"
-                                class="btn member-btn btn-sm">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://x.com/littlewenz" class="socials" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-xl"></i></a>
-                                </li>
-                            </ul>
+                <div class="row">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/littlewenz.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">LittleWenZ</h5>
+                                        <p class="card-text">Master of Dadsaster<br/>and Bubble Tea Inhaler</p>
+                                        <a href="https://www.redbubble.com/people/LittleWenZ/shop?asc=u" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/littlewenz" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/stoopidMexican.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">Stoopid Penguin</h5>
+                                        <p class="card-text">Le Dev by Day,<br/>Web3 Illustrator by night</p>
+                                        <a href="https://www.redbubble.com/people/StoopidPenguin/shop?asc=u" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/StoopidPenguin_" class="socials" target="_blank"><i
+                                                        class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/stoopidpenguin_" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-instagram fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/frenchiemama.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">FrenchieMama</h5>
+                                        <p class="card-text">Animal Lover<br/>and Botanical Product Innovator</p>
+                                        <a href="https://herbies.shop/" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/FrenchieMamaNFT" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/pudgypuzzles.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">Pudgy Puzzles</h5>
+                                        <p class="card-text">Pudgy community fun,<br/>puzzles, and games</p>
+                                        <a href="https://shop.pudgypuzzles.com/" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://twitter.com/pudgypuzzles" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/pudgypuzzles/" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-instagram fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/kent.svg" height="150px" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">Kent_DeFi_CPA</h5>
+                                        <p class="card-text">Serial Entrepreneur & CPA<br/>Passionate About Innovation</p>
+                                        <a href="https://pudgythings.com/" target="_blank"
+                                            class="btn member-btn btn-md">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/DeFi_CPA" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-
-                    <div class="card">
-                        <img src="./img/pfp/stoopidMexican.svg" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">Stoopid Penguin</h5>
-                            <p class="card-text">Le Dev by Day,<br/>Web3 Illustrator by night</p>
-                            <a href="https://www.redbubble.com/people/StoopidPenguin/shop?asc=u" target="_blank"
-                                class="btn member-btn btn-sm">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://x.com/StoopidPenguin_" class="socials" target="_blank"><i
-                                            class="fa-brands fa-x-twitter fa-xl"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/stoopidpenguin_" class="socials" target="_blank"><i
-                                        class="fa-brands fa-instagram fa-xl"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./img/pfp/frenchiemama.svg" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">FrenchieMama</h5>
-                            <p class="card-text">Animal Lover<br/>and Botanical Product Innovator</p>
-                            <a href="https://herbies.shop/" target="_blank"
-                                class="btn member-btn btn-sm">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://x.com/FrenchieMamaNFT" class="socials" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-xl"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./img/pfp/pudgypuzzles.svg" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">Pudgy Puzzles</h5>
-                            <p class="card-text">Pudgy community fun,<br/>puzzles, and games</p>
-                            <a href="https://shop.pudgypuzzles.com/" target="_blank"
-                                class="btn member-btn btn-sm">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://twitter.com/pudgypuzzles" class="socials" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-xl"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/pudgypuzzles/" class="socials" target="_blank"><i
-                                        class="fa-brands fa-instagram fa-xl"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./img/pfp/kent.svg" height="150px" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">Kent_DeFi_CPA</h5>
-                            <p class="card-text">Serial Entrepreneur & CPA<br/>Passionate About Innovation</p>
-                            <a href="https://pudgythings.com/" target="_blank"
-                                class="btn member-btn btn-md">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://x.com/DeFi_CPA" class="socials" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-2xl"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <!--
                     <div class="card">
                         <img src="./img/pfp/spiffy.svg" class="pfp">
@@ -334,6 +348,11 @@
             </div>
         </footer>
     </div>
+
+    <!-- SwiperJS / Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/pudgy.js"></script>
+
 </body>
 
 

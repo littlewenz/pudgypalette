@@ -1,6 +1,7 @@
 @default-blue: #699FFA;
 @christmas-red: #e24e4e;
 @theme-colour: @default-blue;
+@card-width: 23rem;
 
 @font-face {
     font-family: 'Knicknack';
@@ -246,7 +247,7 @@ h5 {
 
 #members {
     .card {
-        width: 23rem;
+        width: @card-width;
         margin: 15px;
         display: flex;
         flex-direction: column;
@@ -254,10 +255,6 @@ h5 {
         border-radius: 20px;
         border: none;
         background-color: @theme-colour;
-
-        @media screen and (max-width: 576px) {
-            width: 23rem;
-        }
 
         .pfp {
             margin-top: 25px;
@@ -352,6 +349,48 @@ h5 {
                 }
             }
         }
+    }
+
+
+    .swiper {
+        height: 120%;
+    }
+
+    .swiper-slide {
+        justify-items: center;
+
+        .card::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.6);
+        }
+    }
+
+    .swiper-slide-prev, .swiper-slide-next {
+        .card::before {
+            content: "";
+            background-color: rgba(255,255,255,0.3);
+        }
+    }
+
+    .swiper-slide-active {
+        .card::before {
+            content: "";
+            display: none;
+        }
+    }
+
+    .swiper-pagination {
+        bottom: -5px !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: @theme-colour;
     }
 }
 

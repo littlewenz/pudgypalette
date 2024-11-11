@@ -229,11 +229,6 @@ h5 {
   border: none;
   background-color: #699FFA;
 }
-@media screen and (max-width: 576px) {
-  #members .card {
-    width: 23rem;
-  }
-}
 #members .card .pfp {
   margin-top: 25px;
   height: 180px;
@@ -316,6 +311,37 @@ h5 {
   #members .card-body ul li {
     font-size: 1.75em !important;
   }
+}
+#members .swiper {
+  height: 120%;
+}
+#members .swiper-slide {
+  justify-items: center;
+}
+#members .swiper-slide .card::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#members .swiper-slide-prev .card::before,
+#members .swiper-slide-next .card::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#members .swiper-slide-active .card::before {
+  content: "";
+  display: none;
+}
+#members .swiper-pagination {
+  bottom: -5px !important;
+}
+#members .swiper-pagination-bullet-active {
+  background-color: #699FFA;
 }
 #faqs .accordion .accordion-item {
   color: white;
