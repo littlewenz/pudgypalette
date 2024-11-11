@@ -384,6 +384,14 @@ h5 {
         }
     }
 
+    .swiper-button-next, .swiper-button-prev {
+        color: @theme-colour;
+
+        @media screen and (max-width: 576px) {
+            display: none;
+        }
+    }
+
     .swiper-slide-active {
         .card::before {
             content: "";
