@@ -71,5 +71,10 @@ const swiper = new Swiper('.swiper-members', {
       el: '.swiper-pagination',
       clickable: true,
       type: 'bullets',
+    }, 
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
     }
   });
