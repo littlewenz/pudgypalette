@@ -312,7 +312,7 @@ h5 {
     font-size: 1.75em !important;
   }
 }
-#members .swiper {
+#members .swiper-members {
   height: 120%;
 }
 #members .swiper-slide {
@@ -342,6 +342,64 @@ h5 {
 }
 #members .swiper-pagination-bullet-active {
   background-color: #699FFA;
+}
+#products .card {
+  width: 300px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: none;
+  background-color: #699FFA;
+}
+#products .card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 150px;
+  width: auto;
+  object-fit: cover;
+}
+#products .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  color: #FFFFFF;
+}
+#products .card-body h5 {
+  margin-top: 10px;
+}
+#products .card-body .card-title {
+  font-family: Knicknack;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  flex-grow: 1;
+}
+@media screen and (max-width: 576px) {
+  #products .card-body .card-title {
+    font-size: 28px;
+  }
+}
+#products .card-body .card-text {
+  flex-grow: 1;
+  font-size: 16px;
+  padding: 15px 0 15px 0;
+}
+#products .card-body .product-btn {
+  transition: color 0.3s;
+  width: 150px;
+}
+#products .card-body .product-btn:hover {
+  background-color: #00142d;
+  color: #f5fdff;
+  border-color: #00142d;
+}
+#products .card-body a.socials {
+  text-decoration: none;
+  color: #FFFFFF !important;
 }
 #faqs .accordion .accordion-item {
   color: white;

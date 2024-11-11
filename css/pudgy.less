@@ -1,7 +1,8 @@
 @default-blue: #699FFA;
 @christmas-red: #e24e4e;
 @theme-colour: @default-blue;
-@card-width: 23rem;
+@card-width-members: 23rem;
+@card-width-products: 300px;
 
 @font-face {
     font-family: 'Knicknack';
@@ -247,7 +248,7 @@ h5 {
 
 #members {
     .card {
-        width: @card-width;
+        width: @card-width-members;
         margin: 15px;
         display: flex;
         flex-direction: column;
@@ -352,7 +353,7 @@ h5 {
     }
 
 
-    .swiper {
+    .swiper-members {
         height: 120%;
     }
 
@@ -391,6 +392,77 @@ h5 {
 
     .swiper-pagination-bullet-active {
         background-color: @theme-colour;
+    }
+}
+
+#products {
+    .card {
+        width: @card-width-products;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 20px;
+        border: none;
+        background-color: @theme-colour;
+
+        img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 150px;
+            width: auto;
+            object-fit: cover;
+        }
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        color: #FFFFFF;
+
+        h5 {
+            margin-top: 10px;
+        }
+
+        .card-title {
+            font-family: Knicknack;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            flex-grow: 1;
+
+            @media screen and (max-width: 576px) {
+                font-size: 28px;
+            }
+
+        }
+
+        .card-text {
+            flex-grow: 1;
+            font-size: 16px;
+            padding: 15px 0 15px 0;
+        }
+
+        .product-btn {
+            transition: color 0.3s;
+            width: 150px;
+
+            &:hover {
+                background-color: #00142d;
+                color: #f5fdff;
+                border-color: #00142d;
+            }
+        }
+
+        a {
+            &.socials {
+                text-decoration: none;
+                color: #FFFFFF !important;
+            }
+        }
     }
 }
 
