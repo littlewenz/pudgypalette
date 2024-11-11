@@ -1,26 +1,59 @@
+@default-blue: #699FFA;
+@christmas-red: #e24e4e;
+@theme-colour: @default-blue;
+@card-width-members: 23rem;
+@card-width-products: 300px;
+
 @font-face {
-    font-family: 'knicknack';
-    src: url('/fonts/knicknack.woff2') format('woff2'),
-         url('/fonts/knicknack.woff') format('woff');
+    font-family: 'Knicknack';
+    src: url('../fonts/Knicknack-Regular.eot');
+    src: local('Knicknack Regular'), local('Knicknack-Regular'),
+        url('../fonts/Knicknack-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Knicknack-Regular.woff2') format('woff2'),
+        url('../fonts/Knicknack-Regular.woff') format('woff'),
+        url('../fonts/Knicknack-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     font-family: Poppins;
+    font-size: 20px;
+    line-height: 28px;
+
+    @media screen and (max-width: 576px) {
+        font-size: 15px;
+        line-height: 23px;
+    }
+}
+
+.font-knicknack
+{
+    font-family: Knicknack;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .btn {
-    border-radius: 40px;
-    background: #f5fdff;
-    box-shadow: 7px 10px 4px 0px rgba(0, 0, 0, 0.25);
-    color: black;
-    width: 272px;
+    /* Layout Properties */
+    top: 697px;
+    left: 280px;
+    width: 250px;
     height: 50px;
-    flex-shrink: 0;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    opacity: 1;
     padding-top: 13px;
+    font: Poppins;
+    font-weight: 700;
 }
 
 h1 {
@@ -46,12 +79,14 @@ h5 {
     font-weight: 500;
 }
 
-#PudgyPaletteName {
-    font-family: Jomhuria;
-    font-size: 3em;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.arrow {
+    position: relative;
+    top: -47px;
+    text-decoration: none;
+}
+
+.arrow-back {
+    text-decoration: none;
 }
 
 #menu {
@@ -71,41 +106,182 @@ h5 {
     }
 }
 
+#MerchAndIceName {
+    font-family: Jomhuria;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 40px;
+    
+    @media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+        margin-top: 0px;
+        margin-bottom: -55px;
+    }
+}
+
 #landing {
-    border-radius: 0px 0px 60px 60px;
-    background: #81acfd;
-    height: 100vh;
+    border-radius: 0px 0px 120px 120px;
+
+    @media screen and (max-width: 576px) {
+        border-radius: 0px 0px 60px 60px;
+    }
+
+    background: @theme-colour;
+
+    .logo {
+        height: 100px;
+
+        @media screen and (max-width: 768px) {
+            height: 75px;
+        }
+    
+        @media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+            height: 75px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo-underline {
+            width: 150px;
+            position: relative;
+            top: -15px;
+        }
+    }
+    
+    @media screen and (min-width: 577px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+        .logo-underline {
+            width: 150px;
+            position: relative;
+            top: -15px;
+        }
+    }
 
     .align-items-center {
         height: 100%;
     }
 
+    .title {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 15px;
+    
+        @media screen and (max-width: 576px) and (max-aspect-ratio: 1/1) {
+            font-size: 40px;
+            line-height: 42px;
+        }
+    
+        @media screen and (min-width: 577px) and (max-width: 768px) and (min-aspect-ratio: 1/1) {
+            font-size: 33px;
+            line-height: 35px;
+        }
+    
+        @media screen and (min-width: 769px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+            font-size: 49px;
+            line-height: 50px;
+        }
+    
+        @media screen and (min-width: 577px) and (max-width: 1200px) and (max-aspect-ratio: 1/1) {
+            font-size: 49px;
+            line-height: 50px;
+        }
+    }
+
     p {
         color: white;
+    
+        /*
+        max-aspect-ration: 1/1 = portrait
+        min-aspect-ration: 1/1 = landscape
+        */
+    
+        @media screen and (min-width: 577px) and (max-width: 768px) and (min-aspect-ratio: 1/1) {
+            font-size: 13px;
+            line-height: 14px;
+        }
+        @media screen and (min-width: 769px) and (max-width: 1200px) and (min-aspect-ratio: 1/1) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+
+    .landing-btn {
+        background-color: #f5fdff;
+        border-color: #f5fdff;
+        color: #00142d;
+    
+        &:hover {
+            background-color: #00142d;
+            color: #f5fdff;
+            border-color: #00142d;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .mobile-bottom
+        {
+            position: absolute;
+            left: 0px;
+            bottom: 70px;
+        }   
+    }
+
+    .next-section-btn
+    {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0px;
+        margin-top: -20px;
     }
 }
-.landing-btn {
-    background-color: #f5fdff;
-    border-color: #f5fdff;
-    color: #00142d;
 
-    &:hover {
-        background-color: #00142d;
-        color: #f5fdff;
-        border-color: #00142d;
+#description {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @media screen and (max-width: 576px) {
+        padding-top: 125px;
+        padding-bottom: 125px;
     }
 }
 
 #members {
     .card {
-        width: 100%;
+        width: @card-width-members;
         margin: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-radius: 20px;
+        border: none;
+        background-color: @theme-colour;
+        left: -1px;
+
+        @media screen and (max-width: 576px) {
+            left: -3px;
+        }
 
         .pfp {
-            margin: 25px;
+            margin-top: 25px;
+            height: 180px;
+
+            @media screen and (max-width: 576px) {
+                height: 200px;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 55px;
+            width: 120px;
+            right: 0px;
+            bottom: -17px;
+            background: url("../img/snow_member_shops.svg") no-repeat;
+            background-position-x: right;
+            background-size: 120px;
         }
     }
 
@@ -115,37 +291,55 @@ h5 {
         align-items: center;
         text-align: center;
         height: 100%;
+        color: #FFFFFF;
 
         h5 {
-        margin-top: 10px;
+            margin-top: 10px;
+        }
+
+        .card-title {
+            font-family: Knicknack;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 30px;
+            flex-grow: 1;
+
+            @media screen and (max-width: 576px) {
+                font-size: 28px;
+            }
+
         }
 
         .card-text {
-        flex-grow: 1;
+            flex-grow: 1;
+            font-size: 16px;
+            padding: 15px 0 15px 0;
         }
 
         .member-btn {
-            background-color: #00142d;
-            border-color: #00142d;
-            color: #f5fdff;
             transition: color 0.3s;
 
             &:hover {
-                background-color: #f5fdff;
-                color: #00142d;
-                border-color: #f5fdff;
+                background-color: #00142d;
+                color: #f5fdff;
+                border-color: #00142d;
             }
         }
 
         a {
             &.socials {
-                color: #000000 !important;
-                text-decoration: none;;
+                text-decoration: none;
+                color: #FFFFFF !important;
             }
         }
 
         ul {
-            width: 100%;
+            width: 40%;
+
+            @media screen and (max-width: 576px) {
+                width: 50%;
+            }
+
             display: table;
             table-layout: fixed;
             padding: 0px;
@@ -155,30 +349,243 @@ h5 {
                 display: table-cell;
                 width: auto;
                 text-align: center;
+                
+                @media screen and (max-width: 576px) {
+                    font-size: 1.75em !important;
+                }
+            }
+        }
+    }
+
+
+    .swiper-members {
+        height: 120%;
+    }
+
+    .swiper-slide {
+        justify-items: center;
+
+        .card::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.6);
+        }
+    }
+
+    .swiper-slide-prev, .swiper-slide-next {
+        .card::before {
+            content: "";
+            background-color: rgba(255,255,255,0.3);
+        }
+    }
+
+    .swiper-slide-active {
+        .card::before {
+            content: "";
+            display: none;
+        }
+    }
+
+    .swiper-pagination {
+        bottom: -5px !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: @theme-colour;
+    }
+}
+
+#products {
+    .card {
+        width: @card-width-products;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 20px;
+        border: none;
+        background-color: @theme-colour;
+
+        img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 150px;
+            width: auto;
+            object-fit: cover;
+        }
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        color: #FFFFFF;
+
+        h5 {
+            margin-top: 10px;
+        }
+
+        .card-title {
+            font-family: Knicknack;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            flex-grow: 1;
+
+            @media screen and (max-width: 576px) {
+                font-size: 28px;
             }
 
+        }
+
+        .card-text {
+            flex-grow: 1;
+            font-size: 16px;
+            padding: 15px 0 15px 0;
+        }
+
+        .product-btn {
+            transition: color 0.3s;
+            width: 150px;
+
+            &:hover {
+                background-color: #00142d;
+                color: #f5fdff;
+                border-color: #00142d;
+            }
+        }
+
+        a {
+            &.socials {
+                text-decoration: none;
+                color: #FFFFFF !important;
+            }
+        }
+    }
+}
+
+#faqs {
+    .accordion {
+        .accordion-item {
+            color: white;
+            background-color: @theme-colour;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            button {
+                color: white;
+                background-color: @theme-colour;
+                border-radius: 20px;
+                font-family: Knicknack;
+                font-weight: normal;
+                font-style: normal;
+                font-size: 20px;
+                box-shadow: none;
+                border-color: rgba(0,0,0,0);
+                padding-right: 100px;
+
+                @media screen and (max-width: 576px) {
+                    height: 88px;
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 40px;
+                    width: 50px;
+                    right: 5px;
+                    top: 10px;
+                    background: url("../img/snow_button_faq.svg") no-repeat;
+                    background-position-x: right;
+                    background-size: 50px;
+
+                    @media screen and (max-width: 576px) {
+                        top: 28px;
+                    }
+                }
+
+                &::after {
+                    background-image: url('../img/arrow_down.svg');
+                    z-index: 2;
+                    position: absolute;
+                    background-size: 18px;
+                    right: 20px;
+                    top: 18px;
+
+                    @media screen and (max-width: 576px) {
+                        top: 40px;
+                    }
+                }
+
+                &:not(.collapsed)::after{
+                    rotate: Y 180deg;
+                    position: absolute;
+                    top: 12px;
+                    right: 20px;
+
+                    @media screen and (max-width: 576px) {
+                        top: 30px;
+                    }
+                }
+
+            }
+
+            .accordion-body {
+                font-family: Poppins;
+                font-size: 16px;
+
+                a {
+                    color: #FFFFFF;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .thankyou {
+        margin: 100px 0 100px 0;
+        @media screen and (max-width: 576px) {
+            margin: 50px 0 50px 0;
+        }
+        img {
+            background-color: @theme-colour;
+            border-radius: 50%;
+            height: 100px;
+            margin-bottom: 15px;
         }
     }
 }
 
 footer {
-    background-color: #477dfa;
-    a {
-        color: white;
-        transition: color 0.3s;
+    background-color: @theme-colour;
+    border-radius: 120px 120px 0px 0px;
+    font-family: Knicknack;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
 
-        &:hover {
-        color: #00142d;
-        }
+    @media screen and (max-width: 576px) {
+        border-radius: 60px 60px 0px 0px;
+        font-size: 18px;
     }
-}
 
+    .snow-corner-left {
+        position: relative;
+        top: -40px;
+        left: 20px;
+    }
 
-@media only screen and (max-width: 768px) {
-    .mobile_bottom
-    {
-        position: absolute;
-        bottom: 20px;
-        left: 0px;  
-    }   
+    .snow-corner-right {
+        position: relative;
+        right: 15px;
+        bottom: -20px;
+    }
 }

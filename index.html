@@ -12,6 +12,7 @@
     <meta name="og:description">
     <meta name="og:url">
     <meta name="og:site_name">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
 
     <!-- jQuery libraries -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -20,6 +21,9 @@
     <!-- bootstrap libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+
+    <!-- swiperjs libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.css"/>
 
     <!-- fontawesome libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
@@ -33,62 +37,49 @@
         rel="stylesheet">
 
     <!-- custom js/css -->
-    <script src="./js/pudgy.js"></script>
     <link rel="stylesheet" href="./css/pudgy.css" />
 </head>
 
 <body>
     <div class="container-fluid p-0">
-        <!--  navigation menu -->
-        <div id="menu" class="d-flex align-items-center justify-content-evenly flex-row merchandice_menu">
-            <!--
-            <div class="d-flex flex-column">
-                <a href="#members">Members</a>
-            </div>
-            -->
-            <div id="PudgyPaletteName" class="d-flex flex-column text-center">Merch & Ice</div>
-            <!--
-            <div class="d-flex flex-column">
-                <a href="#products">Products</a>
-            </div>
-            -->
-            <!--
-            <div class="d-flex flex-column">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#modalFAQ">About</a>
-            </div>
-            <div class="d-flex flex-column">
-                <a href="https://www.redbubble.com/signup" target="_blank">Sign Up</a>
-            </div>
-            -->
-        </div>
-
         <!-- landing section -->
         <section id="landing">
             <div class="container">
                 <div class="row">
+                    <div class="col-12 text-center">
+                        <div id="MerchAndIceName" class="d-flex flex-column align-items-center">
+                            <div><img src="./img/logo_merchandice.png" class="logo"/></div>
+                            <div><img src="./img/snow_underline.svg" class = "logo-underline"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="MerchAndIceLandingInfo">
                     <!-- left side -->
-                    <div class="col-12 col-md-6">
-                        <div class="d-flex align-items-center min-vh-100">
-                            <div class="container p-5">
+                    <div class="col-12 col-sm-6">
+                        <div class="d-flex align-items-center text-center text-sm-start ">
+                            <div class="container p-4">
                                 <div class="row">
-                                    <div class="col d-none d-md-block text-center">
-                                        <!--<h1>By Penguins<br/>For Penguins</h1>-->
-                                        <img src="./img/bypengforpeng.svg" width="80%;" style="margin-bottom: 50px;"/>
+                                    <div class="col font-knicknack title">
+                                        By Penguins,
+                                        <br/>
+                                        For Penguins
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 d-sm-none">
+                                        <img src="./img/loading.svg" width="65%;" style="margin-bottom: 15px;" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
                                         <p>At Merch &amp; Ice, we celebrate our members' unique creations. Each purchase
                                             supports their talent and enriches our community. Join us in making a
                                             difference, one artwork at a time!</p>
                                     </div>
-                                    <div class="col d-md-none text-center">
-                                        <img src="./img/bypengforpeng.svg" width="95%;" style="margin-bottom: 50px;"/>
-                                        <p>At Merch & Ice, we celebrate unique creations. Each purchase supports our members and strengthens the community.</p>
-                                    </div>
                                 </div>
-                                <div class="row text-center mt-2">
-                                    <div class="col-12 d-md-none">
-                                        <img src="./img/loading.svg" width="95%;" />
-                                    </div>
-                                    <div class="col-12 mobile_bottom">
-                                        <a class="btn landing-btn btn-md" href="#members" role="button">Shop now</a>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a class="btn landing-btn btn-sm" href="#members" role="button">Explore</a>
                                     </div>
                                 </div>
                             </div>
@@ -96,11 +87,43 @@
                     </div>
 
                     <!-- right side -->
-                    <div class="col-12 col-md-6 d-md-block d-none">
+                    <div class="col-12 col-sm-6 d-sm-block d-none">
                         <div class="d-flex align-items-center justify-content-center">
-                            <img src="./img/loading.svg" height="70%;" />
+                            <img src="./img/loading.svg" width="100%;" />
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-none d-md-block">
+                        <br/><br/><br/>
+                    </div>
+                    <div class="col-12">
+                        <div class="next-section-btn">
+                                <a href="#description">
+                                    <img src="./img/snow_button_section.svg" class="arrow_back" height="100%"/>
+                                    <br/>
+                                    <img src="./img/arrow_down.svg" class="arrow" height="100%"/>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- description section -->
+        <section id="description">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-2 col-1"></div>
+                    <div class="col-sm-8 col-10 text-center">
+                        Merch & Ice are here to showcase the incredible works of Pudgy Penguins community creators.
+                        You can explore a variety of unique designs and products available for purchase in their own shops below.
+                        <br/><br/>
+                        Each talented individual brings their own unique style and creativity, and you can learn more about them by clicking on their social profiles linked under each <a href="#members">member's</a> section.
+                        <br/><br/>
+                        Happy Shopping!
+                    </div>
+                    <div class="col-sm-2 col-1"></div>
                 </div>
             </div>
         </section>
@@ -108,109 +131,129 @@
         <!-- members section -->
         <section id="members" class="py-5">
             <div class="container">
-                <h2 class="text-left mb-4">Members</h2>
-                <div class="row justify-content-center">
-                    <div class="card" style="width: 20rem;">
-                        <img src="./img/pfp/littlewenz.svg" height="150px" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">Little WenZ</h5>
-                            <p class="card-text">Master of Dadsaster and Bubble Tea Inhaler</p>
-                            <a href="https://www.redbubble.com/people/LittleWenZ/shop?asc=u" target="_blank"
-                                class="btn member-btn btn-md">View Shop</a>
-                            <br />
-                            <a href="https://x.com/littlewenz" class="socials" target="_blank"><i
-                                    class="fa-brands fa-x-twitter fa-2xl"></i></a>
+                <h2 class="text-left mb-4 title font-knicknack text-center section-heading">Member Shops</h2>
+                <div class="row">
+                    <div class="swiper swiper-members">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/littlewenz.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">LittleWenZ</h5>
+                                        <p class="card-text">Master of Dadsaster<br/>and Bubble Tea Inhaler</p>
+                                        <a href="https://www.redbubble.com/people/LittleWenZ/shop?asc=u" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/littlewenz" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/stoopidMexican.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">Stoopid Penguin</h5>
+                                        <p class="card-text">Le Dev by Day,<br/>Web3 Illustrator by night</p>
+                                        <a href="https://www.redbubble.com/people/StoopidPenguin/shop?asc=u" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/StoopidPenguin_" class="socials" target="_blank"><i
+                                                        class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/stoopidpenguin_" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-instagram fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/frenchiemama.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">FrenchieMama</h5>
+                                        <p class="card-text">Animal Lover<br/>and Botanical Product Innovator</p>
+                                        <a href="https://herbies.shop/" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/FrenchieMamaNFT" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/pudgypuzzles.svg" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">Pudgy Puzzles</h5>
+                                        <p class="card-text">Pudgy community fun,<br/>puzzles, and games</p>
+                                        <a href="https://shop.pudgypuzzles.com/" target="_blank"
+                                            class="btn member-btn btn-sm">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://twitter.com/pudgypuzzles" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/pudgypuzzles/" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-instagram fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="./img/pfp/kent.svg" height="150px" class="pfp">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="card-title">Kent_DeFi_CPA</h5>
+                                        <p class="card-text">Serial Entrepreneur & CPA<br/>Passionate About Innovation</p>
+                                        <a href="https://pudgythings.com/" target="_blank"
+                                            class="btn member-btn btn-md">View Shop</a>
+                                        <br />
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com/DeFi_CPA" class="socials" target="_blank"><i
+                                                    class="fa-brands fa-x-twitter fa-xl"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-
-                    <div class="card" style="width: 20rem;">
-                        <img src="./img/pfp/stoopidMexican.svg" height="150px" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">Stoopid Penguin</h5>
-                            <p class="card-text">Le Dev by Day, Web3 Illustrator by Night</p>
-                            <a href="https://www.redbubble.com/people/StoopidPenguin/shop?asc=u" target="_blank"
-                                class="btn member-btn btn-md">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://x.com/StoopidPenguin_" class="socials" target="_blank"><i
-                                            class="fa-brands fa-x-twitter fa-2xl"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/stoopidpenguin_" class="socials" target="_blank"><i
-                                        class="fa-brands fa-instagram fa-2xl"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 20rem;">
-                        <img src="./img/pfp/frenchiemama.svg" height="150px" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">FrenchieMama</h5>
-                            <p class="card-text">Animal Lover and Botanical Product Innovator</p>
-                            <a href="https://herbies.shop/" target="_blank"
-                                class="btn member-btn btn-md">View Shop</a>
-                            <br />
-                            <a href="https://x.com/FrenchieMamaNFT" class="socials" target="_blank"><i
-                                    class="fa-brands fa-x-twitter fa-2xl"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 20rem;">
-                        <img src="./img/pfp/pudgypuzzles.svg" height="150px" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">Pudgy Puzzles</h5>
-                            <p class="card-text">Pudgy Community Fun, Puzzles, and Games</p>
-                            <a href="https://shop.pudgypuzzles.com/" target="_blank"
-                                class="btn member-btn btn-md">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://twitter.com/pudgypuzzles" class="socials" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-2xl"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/pudgypuzzles/" class="socials" target="_blank"><i
-                                        class="fa-brands fa-instagram fa-2xl"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 20rem;">
-                        <img src="./img/pfp/kent.svg" height="150px" class="pfp">
-                        <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                            <h5 class="card-title">Kent_DeFi_CPA</h5>
-                            <p class="card-text">Serial entrepreneur & CPA<br/>Passionate About Innovation</p>
-                            <a href="https://pudgythings.com/" target="_blank"
-                                class="btn member-btn btn-md">View Shop</a>
-                            <br />
-                            <ul>
-                                <li>
-                                    <a href="https://x.com/DeFi_CPA" class="socials" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-2xl"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <!--
-                    <div class="card" style="width: 20rem;">
-                        <img src="./img/pfp/spiffy.svg" height="150px" class="pfp">
+                    <div class="card">
+                        <img src="./img/pfp/spiffy.svg" class="pfp">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
                             <h5 class="card-title">Spiffy</h5>
                             <p class="card-text">Cute but Deadly</p>
                             <a href="https://www.spiffytoys.co/" target="_blank"
-                                class="btn member-btn btn-md">View Shop</a>
+                                class="btn member-btn btn-sm">View Shop</a>
                             <br />
                             <ul>
                                 <li>
                                     <a href="https://x.com/Spiffy_Penguin" class="socials" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-2xl"></i></a>
+                                        class="fa-brands fa-x-twitter fa-xl"></i></a>
                                 </li>
                                 <li>
                                     <a href="https://www.instagram.com/spiffy.toys/" class="socials" target="_blank"><i
-                                        class="fa-brands fa-instagram fa-2xl"></i></a>
+                                        class="fa-brands fa-instagram fa-xl"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -220,111 +263,109 @@
             </div>
         </section>
 
-        <!-- products section -->
-         <!--
-        <section id="products" class="py-5">
+        <!-- featured products section -->
+        <!--section id="products" class="py-5">
             <div class="container">
-                <h2 class="text-left mb-4">Products</h2>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <svg class="d-block w-100 bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%"
-                                    fill="#dee2e6" dy=".3em">Art Placeholder</text>
-                            </svg>
+                <h2 class="text-left mb-4 title font-knicknack text-center section-heading">Featured Products</h2>
+                <div class="row">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div id="products-cards" class="swiper-slide"></div>
                         </div>
-                        <div class="carousel-item">
-                            <svg class="d-block w-100 bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%"
-                                    fill="#dee2e6" dy=".3em">Art Placeholder</text>
-                            </svg>
+                    </div>
+                </div>
+        </section-->
+
+        <!-- faqs section -->
+        <section id="faqs" class="py-5">
+            <div class="container">
+                <h2 class="text-left mb-4 title font-knicknack text-center section-heading">FAQs</h2>
+
+                <div class="row justify-content-center">
+                    <div class="d-none d-sm-block col-sm-3"></div>
+                    <div class="col-12 col-sm-6">
+                        <div class="accordion" id="faq-accordian">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq1-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                        1. What types of products are available?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1-heading" data-bs-parent="#faq-accordian">
+                                    <div class="accordion-body">
+                                        We offer a wide range of products created by our members including apparel, home decor, stationery,
+                                        plushies, puzzles, and accessories.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq2-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        2. How do I purchase items?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faq-accordian">
+                                    <div class="accordion-body">
+                                        Simply visit our <a href="#members">members'</a> shops and follow their instructions.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq3-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        3. Can I support the creators?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faq-accordian">
+                                    <div class="accordion-body">
+                                        Absolutely! Purchasing their products is a great way to support them. Additionally, you can
+                                    share their work on social media to help spread the word.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq4-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        4. How can I become a featured artist?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faq-accordian">
+                                    <div class="accordion-body">
+                                        If you're a Pudgy Penguins community artist or product creators and interested in being featured, 
+                                    please reach out to us by messaging us through our X accounts.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <svg class="d-block w-100 bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#FE8C8C"></rect><text x="50%" y="50%"
-                                    fill="#dee2e6" dy=".3em">Art Placeholder</text>
-                            </svg>
-                        </div>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-3"></div>
+                </div>
+                <div class="row thankyou">
+                    <div class="col text-center justify-content-center">
+                        <img src="./img/stoopidShinnyBootie.svg">
+                        <br/>
+                        Thank you for visiting Merch & Ice!
                     </div>
                 </div>
             </div>
         </section>
-        -->
-
 
         <!-- footer section -->
-        <footer class="text-white py-4">
+        <footer class="text-white py-5">
             <div class="container">
-                <div class="row mb-3">
-                    <div class="col justify-content-center text-center justify-content-md-start text-md-start">
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalFAQ">About</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="width: 100%; height: 100%; border: 1px white solid"></div>
-                <div class="d-flex justify-content-center text-center justify-content-md-end text-md-end mt-3">
+                <div class="d-flex justify-content-center text-center align-items-center" style="padding-top: 15px;">
+                    <img src="./img/snow_corner_top_left.svg" class="snow-corner-left">
                     <p>&copy; 2024 Merch &amp; Ice. All Rights Reserved.</p>
+                    <img src="./img/snow_corner_bottom_right.svg" class="snow-corner-right">
                 </div>
             </div>
         </footer>
-
-        <div class="modal" id="modalFAQ" tabindex="-1" aria-labelledby="modalFAQLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">About</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>1. What is this this page about?</p>
-                        <p>This landing page showcases the incredible works of Pudgy Penguins community creators. You can
-                            explore a variety of unique designs and products available for purchase on <a
-                                href="https://www.redbubble.com/" target="_blank">Redbubble</a> and their own shops.</p>
-                        <br />
-                        <p>2. Who are the creators featured here?</p>
-                        <p>The mbmers featured are talented individuals from the Pudgy Penguins community, each
-                            bringing their unique style and creativity. You can learn more about them by clicking on
-                            their profiles linked under <a href="#members">members</a> section.</p>
-                        <br />
-                        <p>3. What types of products are available?</p>
-                        <p>Redbubble offers a wide range of products including apparel, home decor, stationery, and
-                            accessories. Each product features original designs created by our artists. We also have members
-                            who setup shops to sell their own creations.</p>
-                        <br />
-                        <p>4. How do I purchase items?</p>
-                        <p>Simply visit our <a href="#members">members'</a> shops! For Rebubble stores, simply 
-                            <a href="https://www.redbubble.com/signup" target="_blank">create an account on Redbubble</a>.</p>
-                        <br />
-                        <p>5. Can I support the artists?</p>
-                        <p>Absolutely! Purchasing their products is a great way to support them. Additionally, you can
-                            share their work on social media to help spread the word.</p>
-                        <br />
-                        <p>6. How can I become a featured artist?</p>
-                        <p>If you're a Pudgy Penguins community artist or product creators and interested in being featured, 
-                            please reach out to us by messaging us through our X accounts.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <script>
-        $(document).ready(function () {
-            $('a[href="#members"]').click(function () {
-                $('#modalFAQ').modal('hide');
-            });
-        });
-    </script>
+
+    <!-- SwiperJS / Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script src="./js/pudgy.js"></script>
+
 </body>
 
 
