@@ -6,6 +6,25 @@ $(document).ready(function () {
     var title = "";
     var creator = "";
     var url = "";
+    var audioIsOn = false;
+
+
+    $(".AudioButton").click(function()
+    {
+        if (audioIsOn){
+            $("#AudioOn").css("display", "none");
+            $("#AudioOff").css("display", "block");
+            audioIsOn = false;
+            $("#XmasMusic").trigger('pause');
+
+        } else 
+        {
+            $("#AudioOn").css("display", "block");
+            $("#AudioOff").css("display", "none");
+            audioIsOn = true;
+            $("#XmasMusic").trigger('play');
+        }
+    });
 
     $.getJSON("https://testportal.merchandice.me/js/featured_products.json", function (data) {
         $.each(data, function(topKey, topVal) {
