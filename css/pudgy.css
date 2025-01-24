@@ -108,7 +108,7 @@ h5 {
 }
 #landing {
   border-radius: 0px 0px 120px 120px;
-  background: #e24e4e;
+  background: #699FFA;
 }
 @media screen and (max-width: 576px) {
   #landing {
@@ -236,7 +236,7 @@ h5 {
   justify-content: space-between;
   border-radius: 20px;
   border: none;
-  background-color: #e24e4e;
+  background-color: #699FFA;
   left: -1px;
 }
 @media screen and (max-width: 576px) {
@@ -350,7 +350,7 @@ h5 {
 }
 #members .swiper-button-next,
 #members .swiper-button-prev {
-  color: #e24e4e;
+  color: #699FFA;
 }
 @media screen and (max-width: 576px) {
   #members .swiper-button-next,
@@ -417,7 +417,7 @@ h5 {
   bottom: -5px !important;
 }
 #members .swiper-pagination-bullet-active {
-  background-color: #e24e4e;
+  background-color: #699FFA;
 }
 #products .card {
   width: 300px;
@@ -427,7 +427,7 @@ h5 {
   justify-content: space-between;
   border-radius: 20px;
   border: none;
-  background-color: #e24e4e;
+  background-color: #699FFA;
 }
 #products .card img {
   border-top-left-radius: 20px;
@@ -479,13 +479,13 @@ h5 {
 }
 #faqs .accordion .accordion-item {
   color: white;
-  background-color: #e24e4e;
+  background-color: #699FFA;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 #faqs .accordion .accordion-item button {
   color: white;
-  background-color: #e24e4e;
+  background-color: #699FFA;
   border-radius: 20px;
   font-family: Knicknack;
   font-weight: normal;
@@ -558,13 +558,13 @@ h5 {
   }
 }
 #faqs .thankyou img {
-  background-color: #e24e4e;
+  background-color: #699FFA;
   border-radius: 50%;
   height: 100px;
   margin-bottom: 15px;
 }
 footer {
-  background-color: #e24e4e;
+  background-color: #699FFA;
   border-radius: 120px 120px 0px 0px;
   font-family: Knicknack;
   font-weight: normal;
