@@ -301,6 +301,9 @@ h5 {
   color: #f5fdff;
   border-color: #00142d;
 }
+#members .card-body .shop-btn {
+  width: 50px;
+}
 #members .card-body a.socials {
   text-decoration: none;
   color: #FFFFFF !important;
